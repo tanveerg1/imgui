@@ -18,6 +18,11 @@ project "ImGui"
 		"imstb_truetype.h",
 		"imgui_demo.cpp"
 	}
+	
+	defines 
+	{
+		"IMGUI_API=__declspec(dllexport)"
+	}
 
 	filter "system:windows"
 		systemversion "latest"
@@ -28,7 +33,7 @@ project "ImGui"
 		pic "On"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "on"
 
 	filter "configurations:Debug"
 		runtime "Debug"
